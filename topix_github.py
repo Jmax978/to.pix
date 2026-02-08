@@ -5,14 +5,14 @@ with Image.open(filename) as img:
 type(img) 
 isinstance(img, Image.Image)
 
-palette = [(32, 1, 93, 255),     #HERE PUT YOUR PALETTE IN FORM OF RGBA, LAST PATAMETER IS ALWAYS 255
-           (74, 29, 71, 255), 
-           (131, 65, 41, 255), 
-           (185, 101, 12, 255), 
-           (206, 115, 0, 255), 
-           (194, 100, 72, 255), 
-           (239, 38, 150, 255), 
-           (255, 0, 224, 255)]
+palette = [(0, 32, 46, 255),       #HERE PUT YOUR PALETTE IN FORM OF RGBA, LAST PATAMETER IS ALWAYS 255
+           (32, 1, 93, 255), 
+           (44, 72, 117, 255), 
+           (138, 80, 143, 255), 
+           (188, 80, 144, 255), 
+           (255, 99, 97, 255), 
+           (255, 133, 49, 255), 
+           (255, 166, 0, 255)]
 
 resized_img = img.reduce(4) #ITERATIONS OF REDUCTION, BIGGER NUMBER = SMALER IMAGE
 
@@ -33,4 +33,5 @@ for i in range(w):
 
 print(f"Done!")
 img_finale.show()
+
 img_finale.save("output.png") #SHOWS NOT A SAVED IMAGE, IT IS SAVED IN THE FOLDER WITH THE CODE
